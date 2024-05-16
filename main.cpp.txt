@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int currStreak;
+    int currBonus;
+    cout<<"Enter current streak:-"<<endl;
+    cin>>currStreak;
+    cout<<"Enter Current bonus:-"<<endl;
+    cin>>currBonus;
+    currBonus=8-currBonus;
+    int target,remaining=0,currGeekBits=0;
+    cout<<"Enter Target you want to achieve :-"<<endl;
+    cin>>target;
+    cout<<"Btw, how many geekbits you cuurently have ?"<<endl;
+    cin>>currGeekBits;
+    cout<<"great"<<endl;
+    target-=currGeekBits;
+    while(currStreak<=target){
+        if(currBonus==8){
+            currStreak+=8;
+            currBonus=0;
+            remaining++;
+        }
+        currStreak++;
+        currBonus++;
+        remaining++;
+    }
+    cout<<"You need to continue POTD for just "<<remaining<<" Days more";
+
+}
